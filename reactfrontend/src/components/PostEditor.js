@@ -1,4 +1,6 @@
 import React from "react";
+import axios from "axios";
+
 import "./../styles/postEditor.css";
 
 class PostEditor extends React.Component {
@@ -11,11 +13,17 @@ class PostEditor extends React.Component {
     handleInput = (e) => {
         this.setState({ [e.target.name]: e.target.value });
     };
+
+    savePost = async (e) => {
+        e.preventDefault();
+
+        const res = await axios.post("/api/add-post", this.state);
+    };
     render() {
         return (
             <div className="postEditor">
                 <div className="editorTitle"> Create/Update Post</div>
-                <form>
+                <form onSubmit={this.savePost}>
                     <div className="postForm">
                         <label className="top">Title:</label>
                         <input
