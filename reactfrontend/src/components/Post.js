@@ -5,8 +5,8 @@ function Post() {
         <div className="card-post">
             <div className="cardHeader">
                 <div className="type">Announcement</div>
-                <p className="cardTitle">Title</p>
-                <div className="time-stamp">September 17, 2022 2:53 PM</div>
+                <div className="cardTitle">TECHNICAL TASK FOR TNP POST CARD SAMPLE TEXT</div>
+                <div className="timeStamp">September 17, 2022 2:53 PM</div>
             </div>
             <div className="cardBody">
                 <p className="description">
@@ -15,8 +15,8 @@ function Post() {
                     pre-assigned slot and the assessment duration for the same
                     is 90 minutes.
                 </p>
-                <button> ReadMore</button>
             </div>
+            <button className="readMore"> ReadMore</button>
         </div>
     );
 }
