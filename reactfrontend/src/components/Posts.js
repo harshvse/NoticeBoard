@@ -21,7 +21,6 @@ class Posts extends React.Component {
                 posts: res.data.posts,
                 loading: false,
             });
-            console.log(res.data.message);
         }
     };
 

@@ -1,13 +1,14 @@
 import Moment from "react-moment";
+import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
 
 import "./../styles/post.css";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Post(props) {
-    console.log(props);
+    const { id } = useParams();
     let desc = props.posts.desc;
-    if (desc.length > 200) {
+    if (!id && desc.length > 200) {
         desc = desc.substring(0, 200);
         desc += "...";
     }
@@ -17,7 +18,6 @@ function Post(props) {
         navigate(`/posts/${props.posts.id}`);
     }
 
-    console.log(typeof desc);
     return (
         <div className="card-post">
             <div className="type">{props.posts.type}</div>

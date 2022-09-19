@@ -25,7 +25,6 @@ class PostEditor extends React.Component {
         );
 
         if (res.data.status === 200) {
-            console.log(res.data.message);
             this.setState({
                 title: "",
                 type: "Announcement",
