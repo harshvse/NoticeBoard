@@ -7,7 +7,7 @@ class Posts extends React.Component {
     state = {
         posts: [],
         loading: true,
-        count: 2,
+        count: 3,
     };
 
     fetchPosts = async () => {
@@ -16,7 +16,7 @@ class Posts extends React.Component {
             this.state
         );
         if (res.data.status === 200) {
-            this.setState({ count: this.state.count + 2 });
+            this.setState({ count: this.state.count + 3 });
             this.setState({
                 posts: res.data.posts,
                 loading: false,
@@ -40,6 +40,11 @@ class Posts extends React.Component {
                     next={this.fetchPosts}
                     hasMore={true}
                     loader={<h4>Loading...</h4>}
+                    endMessage={
+                        <p style={{ textAlign: "center" }}>
+                            <b>Yay! You have seen it all</b>
+                        </p>
+                    }
                 >
                     {this.state.posts.map((posts) => (
                         <Post posts={posts} key={posts.id} />

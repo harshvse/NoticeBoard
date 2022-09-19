@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+import { Editor, EditorState } from "draft-js";
+import { stateToHTML } from "draft-js-export-html";
 
 import "./../styles/postEditor.css";
 
@@ -74,6 +76,7 @@ class PostEditor extends React.Component {
                             required
                         />
                     </div>
+
                     <button type="submit" className="primary">
                         Submit
                     </button>
