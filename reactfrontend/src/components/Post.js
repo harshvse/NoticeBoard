@@ -1,22 +1,23 @@
 import "./../styles/post.css";
+import { Link } from "react-router-dom";
 
-function Post() {
+function Post(props) {
+    console.log(props);
     return (
         <div className="card-post">
+            <div className="type">{props.posts.type}</div>
+
             <div className="cardHeader">
-                <div className="type">Announcement</div>
-                <div className="cardTitle">TECHNICAL TASK FOR TNP POST CARD SAMPLE TEXT</div>
-                <div className="timeStamp">September 17, 2022 2:53 PM</div>
+                <div className="cardTitle">{props.posts.title}</div>
+                <div className="timeStamp">{props.posts.updated_at}</div>
             </div>
             <div className="cardBody">
-                <p className="description">
-                    The online technical re-assessment is scheduled for enclosed
-                    list of students on 18th September 2022 in the below
-                    pre-assigned slot and the assessment duration for the same
-                    is 90 minutes.
-                </p>
+                <p className="description">{props.posts.desc}</p>
             </div>
-            <button className="readMore"> ReadMore</button>
+
+            <Link to="/">
+                <button className="readMore"> ReadMore</button>
+            </Link>
         </div>
     );
 }

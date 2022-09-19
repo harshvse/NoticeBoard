@@ -6,8 +6,8 @@ import "./../styles/postEditor.css";
 class PostEditor extends React.Component {
     state = {
         title: "",
-        type: "",
-        description: "",
+        type: "Announcement",
+        desc: "",
     };
 
     handleInput = (e) => {
@@ -17,7 +17,19 @@ class PostEditor extends React.Component {
     savePost = async (e) => {
         e.preventDefault();
 
-        const res = await axios.post("/api/add-post", this.state);
+        const res = await axios.post(
+            "http://localhost:8000/api/addPost/",
+            this.state
+        );
+
+        if (res.data.status === 200) {
+            console.log(res.data.message);
+            this.setState({
+                title: "",
+                type: "Announcement",
+                desc: "",
+            });
+        }
     };
     render() {
         return (
@@ -30,7 +42,7 @@ class PostEditor extends React.Component {
                             type="text"
                             name="title"
                             className="titleInput"
-                            value={this.state.name}
+                            value={this.state.title}
                             onChange={this.handleInput}
                             placeholder="Enter the Title"
                             required
@@ -54,7 +66,7 @@ class PostEditor extends React.Component {
                         <label>Description:</label>
                         <textarea
                             type="text"
-                            name="description"
+                            name="desc"
                             className="descInput"
                             value={this.state.desc}
                             onChange={this.handleInput}

@@ -12,7 +12,7 @@
 }
 
 .type {
-    max-width: 40%;
+    min-width: 25%;
     border-radius: 8px;
     text-align: center;
     background-color: #e5e5e5;
