@@ -34,7 +34,7 @@ function Post(props) {
                 <p className="description">{desc}</p>
             </div>
 
-            <button className="readMore" onClick={readMore}>
+            <button className="postButton" onClick={readMore}>
                 ReadMore
             </button>
         </div>

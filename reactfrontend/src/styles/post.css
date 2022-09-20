@@ -33,7 +33,7 @@
     padding: 1rem 0;
 }
 
-.readMore {
+.postButton {
     width: 100%;
     margin: 0px;
     border-width: 0px;
@@ -46,7 +46,7 @@
     text-decoration: none;
 }
 
-.readMore:hover {
+.postButton:hover {
     background: #3cb0fd;
     background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
     text-decoration: none;

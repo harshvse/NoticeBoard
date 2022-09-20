@@ -1,9 +1,11 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
+import { useNavigate } from "react-router-dom";
+import Moment from "react-moment";
 
-import Post from "./../components/Post";
 import "./../styles/post.css";
+import "./../styles/fullpost.css";
 
 function FullPost() {
     const { id } = useParams();
@@ -36,8 +38,27 @@ function FullPost() {
     console.log(post);
 
     return (
-        <div>
-            <Post posts={post} />
+        <div className="posts">
+            <div className="card-post">
+                <div className="type">{post.type}</div>
+
+                <div className="cardHeader">
+                    <div className="cardTitle">{post.title}</div>
+                    <div className="timeStamp">
+                        <Moment format="dddd, MMMM Do YYYY, h:mm:ss a">
+                            {post.updated_at}
+                        </Moment>
+                    </div>
+                </div>
+                <div className="cardBody">
+                    <p className="description">{post.desc}</p>
+                </div>
+
+                <div className="postOperations">
+                    <button className="postButtons">Edit Post</button>
+                    <button className="postButtons">Delete Post</button>
+                </div>
+            </div>
         </div>
     );
 }

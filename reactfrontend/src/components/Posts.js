@@ -16,7 +16,7 @@ class Posts extends React.Component {
             this.state
         );
         if (res.data.status === 200) {
-            this.setState({ count: this.state.count + 3 });
+            this.setState({ count: this.state.count + 1 });
             this.setState({
                 posts: res.data.posts,
                 loading: false,

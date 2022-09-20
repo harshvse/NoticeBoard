@@ -13,7 +13,6 @@ function Navbar() {
             <Link to="/" className="brand">
                 <img src={Logo} alt="" className="brand-logo" />
                 Training & Placement Cell
-
             </Link>
             <button
                 className="hamburger"
@@ -23,7 +22,13 @@ function Navbar() {
             >
                 <img src={hamburger} alt="" />
             </button>
-            <div className={ isNavExpanded ? "navigation-menu expanded" : "navigation-menu" }>
+            <div
+                className={
+                    isNavExpanded
+                        ? "navigation-menu expanded"
+                        : "navigation-menu"
+                }
+            >
                 <ul>
                     <li>
                         <a href="/home">Home</a>

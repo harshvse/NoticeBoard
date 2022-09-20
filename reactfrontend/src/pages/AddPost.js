@@ -1,7 +1,7 @@
 import PostEditor from "./../components/PostEditor";
 import "./../styles/editor.css";
 
-function EditPost() {
+function AddPost() {
     return (
         <div className="editorArea">
             <PostEditor />
@@ -9,4 +9,4 @@ function EditPost() {
     );
 }
 
-export default EditPost;
+export default AddPost;
