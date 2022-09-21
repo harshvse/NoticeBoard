@@ -33,9 +33,23 @@ function FullPost() {
 
     useEffect(() => {
         fetchPost();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    console.log(post);
+    const navigate = useNavigate();
+
+    function editPost() {
+        navigate(`/posts/edit/${id}`);
+    }
+    async function deletePost() {
+        const res = await axios.get(
+            `http://localhost:8000/api/posts/delete/${id}`
+        );
+        if (res.data.status === 200) {
+            alert("Post Deleted");
+            navigate("/home");
+        }
+    }
 
     return (
         <div className="posts">
@@ -55,8 +69,12 @@ function FullPost() {
                 </div>
 
                 <div className="postOperations">
-                    <button className="postButtons">Edit Post</button>
-                    <button className="postButtons">Delete Post</button>
+                    <button className="postButtons" onClick={editPost}>
+                        Edit Post
+                    </button>
+                    <button className="postButtons" onClick={deletePost``}>
+                        Delete Post
+                    </button>
                 </div>
             </div>
         </div>
