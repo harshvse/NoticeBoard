@@ -10,11 +10,21 @@ class PostController extends Controller
 {
     public function index(Request $request){
         $count = $request -> input('count');
-        $posts = Post::orderBy('updated_at', 'asc') ->take($count)->get(); ;
+        $posts = Post::orderBy('updated_at', 'desc') ->take($count)->get(); ;
         return response() -> json([
             'status'=> 200,
             'posts' => $posts,
-            'message' => 'Students Fetched Successfully'
+            'message' => 'Post Fetched Successfully'
+        ]);
+    }
+
+    public function fetchID(Request $request){
+        $postID = $request -> route('postID');
+        $post = Post::find($postID);
+        return response() -> json([
+            'status' => 200,
+            'post' => $post,
+            'message' => 'Post fetched from id',
         ]);
     }
 
@@ -28,6 +38,22 @@ class PostController extends Controller
         return response() -> json([
             'status'=> 200,
             'message' => 'Post Stored Successfully'
+        ]);
+    }
+
+    public function update(Request $request){
+        $postID = $request -> route('postID');
+
+        $post = Post::find($postID);
+        $post->title = $request->input('title');
+        $post->type = $request->input('type');
+        $post->desc = $request->input('desc');
+        $post->update();
+
+        return response() -> json([
+            'status'=> 200,
+            'message' => "Post Updated",
+            'post' => $post,
         ]);
     }
 }
