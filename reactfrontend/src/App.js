@@ -12,13 +12,15 @@ function App() {
         <div className="App">
             <BrowserRouter>
                 <Navbar />
-                <Routes>
-                    <Route path="/" element={<Navigate to="/home" />} />
-                    <Route path="/home" element={<Home />} />
-                    <Route path="/posts/:id" element={<FullPost />} />
-                    <Route path="/posts/edit/:id" element={<EditPost />} />
-                    <Route path="/create-post" element={<AddPost />} />
-                </Routes>
+                <div className="site-content">
+                    <Routes>
+                        <Route path="/" element={<Navigate to="/home" />} />
+                        <Route path="/home" element={<Home />} />
+                        <Route path="/posts/:id" element={<FullPost />} />
+                        <Route path="/posts/edit/:id" element={<EditPost />} />
+                        <Route path="/create-post" element={<AddPost />} />
+                    </Routes>
+                </div>
             </BrowserRouter>
         </div>
     );

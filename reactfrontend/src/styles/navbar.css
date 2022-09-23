@@ -2,6 +2,11 @@
 .body {
     font-family: "Roboto" "Times New Roman", Times, serif;
 }
+
+.fixed-nav {
+    position: fixed;
+    width: 100%;
+}
 .navigation {
     height: 60px;
     width: 100%;
