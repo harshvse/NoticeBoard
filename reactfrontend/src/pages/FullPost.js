@@ -72,7 +72,7 @@ function FullPost() {
                     <button className="postButtons" onClick={editPost}>
                         Edit Post
                     </button>
-                    <button className="postButtons" onClick={deletePost``}>
+                    <button className="postButtons" onClick={deletePost}>
                         Delete Post
                     </button>
                 </div>

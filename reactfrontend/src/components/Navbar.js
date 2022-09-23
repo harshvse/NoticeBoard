@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./../styles/navbar.css";
-import Logo from "./../images/logo.png";
+import Logo from "./../images/Logo.png";
 import hamburger from "./../images/hamburger.svg";
 
 function Navbar() {
@@ -12,7 +12,7 @@ function Navbar() {
         <nav className="navigation">
             <Link to="/" className="brand">
                 <img src={Logo} alt="" className="brand-logo" />
-                Training & Placement Cell
+                Notice Board
             </Link>
             <button
                 className="hamburger"
@@ -34,10 +34,10 @@ function Navbar() {
                         <a href="/home">Home</a>
                     </li>
                     <li>
-                        <a href="/about">About</a>
+                        <a href="/create-post">Create Post</a>
                     </li>
                     <li>
-                        <a href="/contact">Contact</a>
+                        <a href="https://harshvse.in">Contact</a>
                     </li>
                 </ul>
             </div>

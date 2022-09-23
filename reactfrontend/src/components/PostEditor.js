@@ -58,7 +58,10 @@ class PostEditor extends React.Component {
     render() {
         return (
             <div className="postEditor">
-                <div className="editorTitle"> Create/Update Post</div>
+                <div className="editorTitle">
+                    {" "}
+                    {this.props.id ? `Edit Post` : "Create New Post"}
+                </div>
                 <form onSubmit={this.savePost}>
                     <div className="postForm">
                         <label className="top">Title:</label>
@@ -99,7 +102,7 @@ class PostEditor extends React.Component {
                         />
                     </div>
 
-                    <button type="submit" className="primary">
+                    <button type="submit" className="submitButton">
                         Submit
                     </button>
                 </form>
