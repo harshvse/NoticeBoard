@@ -1,0 +1,11 @@
+.leftBar {
+    padding: 2em 1em;
+    width: 25vw;
+}
+
+.welcomeBox {
+    border: 5px solid #4c0033;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background-color: #f7f7f3;
+}

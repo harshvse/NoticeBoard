@@ -1,0 +1,24 @@
+.rightBar {
+    padding: 2em 1em;
+    width: 25vw;
+}
+
+.socialMedia {
+    border: 5px solid #4c0033;
+    border-radius: 15px;
+    background-color: #f7f7f3;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.socialLinks div {
+    font-size: 1.5em;
+
+    padding: 10px;
+}
+
+.socialLinks div a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
