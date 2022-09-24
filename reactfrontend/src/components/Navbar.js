@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./../styles/navbar.css";
-import Logo from "./../images/Logo.png";
+import Logo from "./../images/logo.png";
 import hamburger from "./../images/hamburger.svg";
 
 function Navbar() {
