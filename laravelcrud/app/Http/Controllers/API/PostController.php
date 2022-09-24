@@ -56,4 +56,13 @@ class PostController extends Controller
             'post' => $post,
         ]);
     }
+
+    public function delete(Request $request){
+        $postID = $request -> route('postID');
+        Post::where('id', $postID) -> delete();
+        return response() -> json([
+            'status' => 200,
+            'message' => 'Post Deleted',
+        ]);
+    }
 }
