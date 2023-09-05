@@ -11,7 +11,7 @@ Move to the cloned directory and you will find two folders
 laravelcrud and reactfrontend
 
 ```
-cd Tnp-Submission
+cd NoticeBoard
 ```
 First we move to reactfrontend folder
 ```
