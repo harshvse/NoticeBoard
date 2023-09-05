@@ -5,7 +5,7 @@ Blog like notice board for providing latest information tot he students.
 
 ### How to install
 ```
-git clone https://github.com/harshvse/Tnp-Submission
+git clone https://github.com/harshvse/NoticeBoard
 ```
 Move to the cloned directory and you will find two folders
 laravelcrud and reactfrontend
