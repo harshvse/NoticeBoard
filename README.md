@@ -1,5 +1,5 @@
 # About
-My Submission for Training and placement cell technical task
+Blog like notice board for providing latest information tot he students.
 
 # Installation
 
